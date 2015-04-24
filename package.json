@@ -1,0 +1,29 @@
+{
+  "name": "swagger-mongoose",
+  "version": "1.0.0",
+  "description": "convert swagger to mongoose schema and vice versa",
+  "main": "converter.js",
+  "dependencies": {
+    "mongoose": "^4.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "nodeunit test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/qquach/swagger-mongoose"
+  },
+  "keywords": [
+    "swagger",
+    "mongoose",
+    "converter",
+    "schema"
+  ],
+  "author": "Quoc Quach",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/qquach/swagger-mongoose/issues"
+  },
+  "homepage": "https://github.com/qquach/swagger-mongoose"
+}
