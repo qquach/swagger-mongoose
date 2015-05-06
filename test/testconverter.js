@@ -4,7 +4,7 @@
 var converter = require("../converter.js");
 var mongooseType = require("../schema/mongoose_schema_type.js"),
     mongooseSchema = require("../schema/mongoose_schema.js"),
-    moogooseNormalized = require("../schema/moongoose_normalized.js"),
+    moogooseNormalized = require("../schema/mongoose_normalized.js"),
     swaggerSchemma = require("../schema/swagger_schema.js");
 
 module.exports = {

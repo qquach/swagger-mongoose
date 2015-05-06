@@ -7,7 +7,9 @@ module.exports = {
     aNumber: Number,
     aString: String,
     aBoolean: Boolean,
-    anObject: {num: Number, date: Date},
+    anObject: {
+      type:{num: Number, date: Date}
+    },
     aDate: Date,
     anArrayString: [String],
     anArrayObject: [{key:String, value: String}],
