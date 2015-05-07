@@ -1,34 +1,116 @@
 
 [1mtest-validate.js[22m
-pre validate: this: {"aNumber":13,"aString":"asdf","aBoolean":false,"aDate":"1997-01-01T00:00:00.000Z","any1":{"what":"ever"},"_id":"5549d6daff0ea95416b5d40f","any4":[1,"2",true],"any3":[{"what":"ever"},1,"asdf"],"any2":[1,"asdf",true],"anArrayObject":[{"key":"a"},{"value":"B","key":"b"}],"anArrayString":["a","b"],"anObject":{"num":123,"date":"2000-01-01T00:00:00.000Z"}}
-schema: {"aNumber":{"path":"aNumber","instance":"Number","validators":[{"message":"Path `{PATH}` is required.","type":"required"},{"message":"Path `{PATH}` ({VALUE}) is less than minimum allowed value (5).","type":"min"},{"message":"Path `{PATH}` ({VALUE}) is more than maximum allowed value (100).","type":"max"}],"setters":[],"getters":[],"options":{"required":true,"min":5,"max":100},"_index":null,"isRequired":true},"aString":{"enumValues":["asdf","b","c"],"regExp":null,"path":"aString","instance":"String","validators":[{"message":"Path `{PATH}` is required.","type":"required"},{"message":"Path `{PATH}` is invalid ({VALUE}).","type":"regexp"},{"message":"Path `{PATH}` (`{VALUE}`) is longer than the maximum allowed length (10).","type":"maxlength"},{"message":"`{VALUE}` is not a valid enum value for path `{PATH}`.","type":"enum"}],"setters":[],"getters":[],"options":{"match":{},"maxlength":10,"required":true,"enum":["asdf","b","c"]},"_index":null,"isRequired":true},"aBoolean":{"path":"aBoolean","instance":"Boolean","validators":[{"message":"Path `{PATH}` is required.","type":"required"}],"setters":[],"getters":[],"options":{"required":true},"_index":null,"isRequired":true},"anObject.num":{"path":"anObject.num","instance":"Number","validators":[{"message":"Path `{PATH}` is required.","type":"required"}],"setters":[],"getters":[],"options":{"required":true},"_index":null,"isRequired":true},"anObject.date":{"path":"anObject.date","instance":"Date","validators":[{"message":"Path `{PATH}` is required.","type":"required"}],"setters":[],"getters":[],"options":{"required":true},"_index":null,"isRequired":true},"aDate":{"path":"aDate","instance":"Date","validators":[{"message":"Path `{PATH}` is required.","type":"required"},{"message":"Path `{PATH}` ({VALUE}) is after maximum allowed value (Tue May 06 1997 01:54:50 GMT-0700 (Pacific Daylight Time)).","type":"max"},{"message":"Path `{PATH}` ({VALUE}) is before minimum allowed value (Mon Jan 01 1900 00:00:00 GMT-0800 (Pacific Standard Time)).","type":"min"}],"setters":[],"getters":[],"options":{"required":true,"max":"1997-05-06T08:54:50.473Z","min":"1900-01-01T08:00:00.000Z"},"_index":null,"isRequired":true},"anArrayString":{"caster":{"path":"anArrayString","instance":"Mixed","validators":[],"setters":[],"getters":[],"options":{},"_index":null},"path":"anArrayString","instance":"Array","validators":[],"setters":[],"getters":[],"options":{"items":{"type":"string","enum":["a","b","c","d"]},"minlength":5},"_index":null},"anArrayObject":{"caster":{"path":"anArrayObject","instance":"Mixed","validators":[],"setters":[],"getters":[],"options":{},"_index":null},"path":"anArrayObject","instance":"Array","validators":[],"setters":[],"getters":[],"options":{"items":{"key":{"type":"string","enum":["a","b"],"required":true},"value":{"type":"string","required":true,"maxlength":1}},"minlength":2,"maxlength":10},"_index":null},"any1":{"path":"any1","instance":"Mixed","validators":[],"setters":[],"getters":[],"options":{},"_index":null},"any2":{"caster":{"path":"any2","instance":"Mixed","validators":[],"setters":[],"getters":[],"options":{},"_index":null},"path":"any2","instance":"Array","validators":[],"setters":[],"getters":[],"options":{"type":[]},"_index":null},"any3":{"caster":{"path":"any3","instance":"Mixed","validators":[],"setters":[],"getters":[],"options":{},"_index":null},"path":"any3","instance":"Array","validators":[],"setters":[],"getters":[],"options":{"type":[{}]},"_index":null},"any4":{"caster":{"path":"any4","instance":"Mixed","validators":[],"setters":[],"getters":[],"options":{},"_index":null},"path":"any4","instance":"Array","validators":[],"setters":[],"getters":[],"options":{"type":[null]},"_index":null},"_id":{"path":"_id","instance":"ObjectID","validators":[],"setters":[null],"getters":[],"options":{"auto":true},"_index":null},"__v":{"path":"__v","instance":"Number","validators":[],"setters":[],"getters":[],"options":{},"_index":null}}
+pre validate: this: {"aNumber":13,"_id":"554b1fabb4c6fd2831bc77d4"}
+schema: {"aNumber":{"path":"aNumber","instance":"Number","validators":[{"message":"Path `{PATH}` is required.","type":"required"},{"message":"Path `{PATH}` ({VALUE}) is less than minimum allowed value (5).","type":"min"},{"message":"Path `{PATH}` ({VALUE}) is more than maximum allowed value (100).","type":"max"}],"setters":[],"getters":[],"options":{"required":true,"min":5,"max":100},"_index":null,"isRequired":true},"_id":{"path":"_id","instance":"ObjectID","validators":[],"setters":[null],"getters":[],"options":{"auto":true},"_index":null},"__v":{"path":"__v","instance":"Number","validators":[],"setters":[],"getters":[],"options":{},"_index":null}}
 getVal properties: aNumber
 prop: aNumber
+calling next
+✔ testNumber
+pre validate: this: {"aString":"asdf","_id":"554b1fabb4c6fd2831bc77d5"}
+schema: {"aString":{"enumValues":["asdf","b","c"],"regExp":null,"path":"aString","instance":"String","validators":[{"message":"Path `{PATH}` is required.","type":"required"},{"message":"Path `{PATH}` is invalid ({VALUE}).","type":"regexp"},{"message":"Path `{PATH}` (`{VALUE}`) is longer than the maximum allowed length (10).","type":"maxlength"},{"message":"`{VALUE}` is not a valid enum value for path `{PATH}`.","type":"enum"}],"setters":[],"getters":[],"options":{"match":{},"maxlength":10,"required":true,"enum":["asdf","b","c"]},"_index":null,"isRequired":true},"_id":{"path":"_id","instance":"ObjectID","validators":[],"setters":[null],"getters":[],"options":{"auto":true},"_index":null},"__v":{"path":"__v","instance":"Number","validators":[],"setters":[],"getters":[],"options":{},"_index":null}}
 getVal properties: aString
 prop: aString
+calling next
+✔ testString
+pre validate: this: {"aBoolean":false,"_id":"554b1fabb4c6fd2831bc77d6"}
+schema: {"aBoolean":{"path":"aBoolean","instance":"Boolean","validators":[{"message":"Path `{PATH}` is required.","type":"required"}],"setters":[],"getters":[],"options":{"required":true},"_index":null,"isRequired":true},"_id":{"path":"_id","instance":"ObjectID","validators":[],"setters":[null],"getters":[],"options":{"auto":true},"_index":null},"__v":{"path":"__v","instance":"Number","validators":[],"setters":[],"getters":[],"options":{},"_index":null}}
 getVal properties: aBoolean
 prop: aBoolean
+calling next
+✔ testBoolean
+pre validate: this: {"_id":"554b1fabb4c6fd2831bc77d7","anObject":{"num":123,"date":"2000-01-01T00:00:00.000Z"}}
+schema: {"anObject.num":{"path":"anObject.num","instance":"Number","validators":[{"message":"Path `{PATH}` is required.","type":"required"}],"setters":[],"getters":[],"options":{"required":true},"_index":null,"isRequired":true},"anObject.date":{"path":"anObject.date","instance":"Date","validators":[{"message":"Path `{PATH}` is required.","type":"required"}],"setters":[],"getters":[],"options":{"required":true},"_index":null,"isRequired":true},"_id":{"path":"_id","instance":"ObjectID","validators":[],"setters":[null],"getters":[],"options":{"auto":true},"_index":null},"__v":{"path":"__v","instance":"Number","validators":[],"setters":[],"getters":[],"options":{},"_index":null}}
 getVal properties: anObject.num
 prop: anObject
 prop: num
 getVal properties: anObject.date
 prop: anObject
 prop: date
+calling next
+✔ testObject
+pre validate: this: {"aDate":"1997-01-01T00:00:00.000Z","_id":"554b1fabb4c6fd2831bc77d8"}
+schema: {"aDate":{"path":"aDate","instance":"Date","validators":[{"message":"Path `{PATH}` is required.","type":"required"},{"message":"Path `{PATH}` ({VALUE}) is after maximum allowed value (Wed May 07 1997 01:17:47 GMT-0700 (Pacific Daylight Time)).","type":"max"},{"message":"Path `{PATH}` ({VALUE}) is before minimum allowed value (Mon Jan 01 1900 00:00:00 GMT-0800 (Pacific Standard Time)).","type":"min"}],"setters":[],"getters":[],"options":{"required":true,"max":"1997-05-07T08:17:47.886Z","min":"1900-01-01T08:00:00.000Z"},"_index":null,"isRequired":true},"_id":{"path":"_id","instance":"ObjectID","validators":[],"setters":[null],"getters":[],"options":{"auto":true},"_index":null},"__v":{"path":"__v","instance":"Number","validators":[],"setters":[],"getters":[],"options":{},"_index":null}}
 getVal properties: aDate
 prop: aDate
+calling next
+✔ testDate
+pre validate: this: {"_id":"554b1fabb4c6fd2831bc77d9","anArrayString":["a","b","d","a","b","c"]}
+schema: {"anArrayString":{"caster":{"path":"anArrayString","instance":"Mixed","validators":[],"setters":[],"getters":[],"options":{},"_index":null},"path":"anArrayString","instance":"Array","validators":[],"setters":[],"getters":[],"options":{"items":{"type":"string","enum":["a","b","c","d"]},"minItems":5},"_index":null},"_id":{"path":"_id","instance":"ObjectID","validators":[],"setters":[null],"getters":[],"options":{"auto":true},"_index":null},"__v":{"path":"__v","instance":"Number","validators":[],"setters":[],"getters":[],"options":{},"_index":null}}
 getVal properties: anArrayString
 prop: anArrayString
+extValidate | obj: ["a","b","d","a","b","c"], schema: {"type":"array","items":{"type":"string","enum":["a","b","c","d"]},"minItems":5}
+isValidArray | arr: ["a","b","d","a","b","c"], schema: {"type":"array","items":{"type":"string","enum":["a","b","c","d"]},"minItems":5}
+passed required
+passed min
+passed max
+extValidate | obj: "a", schema: {"type":"string","enum":["a","b","c","d"]}
+isValidString | str: a | schema: {"type":"string","enum":["a","b","c","d"]}
+extValidate | obj: "b", schema: {"type":"string","enum":["a","b","c","d"]}
+isValidString | str: b | schema: {"type":"string","enum":["a","b","c","d"]}
+extValidate | obj: "d", schema: {"type":"string","enum":["a","b","c","d"]}
+isValidString | str: d | schema: {"type":"string","enum":["a","b","c","d"]}
+extValidate | obj: "a", schema: {"type":"string","enum":["a","b","c","d"]}
+isValidString | str: a | schema: {"type":"string","enum":["a","b","c","d"]}
+extValidate | obj: "b", schema: {"type":"string","enum":["a","b","c","d"]}
+isValidString | str: b | schema: {"type":"string","enum":["a","b","c","d"]}
+extValidate | obj: "c", schema: {"type":"string","enum":["a","b","c","d"]}
+isValidString | str: c | schema: {"type":"string","enum":["a","b","c","d"]}
+calling next
+✔ testArray
+pre validate: this: {"_id":"554b1fabb4c6fd2831bc77da","anArrayObject":[{"key":"a"},{"value":"B","key":"b"}]}
+schema: {"anArrayObject":{"caster":{"path":"anArrayObject","instance":"Mixed","validators":[],"setters":[],"getters":[],"options":{},"_index":null},"path":"anArrayObject","instance":"Array","validators":[],"setters":[],"getters":[],"options":{"items":{"type":{"key":{"type":"string","enum":["a","b"],"required":true},"value":{"type":"string","required":true,"maxlength":1}}},"minItems":2,"maxItems":10},"_index":null},"_id":{"path":"_id","instance":"ObjectID","validators":[],"setters":[null],"getters":[],"options":{"auto":true},"_index":null},"__v":{"path":"__v","instance":"Number","validators":[],"setters":[],"getters":[],"options":{},"_index":null}}
 getVal properties: anArrayObject
 prop: anArrayObject
+extValidate | obj: [{"key":"a","value":{}},{"key":"b","value":"B"}], schema: {"type":"array","items":{"type":{"key":{"type":"string","enum":["a","b"],"required":true},"value":{"type":"string","required":true,"maxlength":1}}},"minItems":2,"maxItems":10}
+isValidArray | arr: [{"key":"a","value":{}},{"key":"b","value":"B"}], schema: {"type":"array","items":{"type":{"key":{"type":"string","enum":["a","b"],"required":true},"value":{"type":"string","required":true,"maxlength":1}}},"minItems":2,"maxItems":10}
+passed required
+passed min
+passed max
+extValidate | obj: {"key":"a","value":{}}, schema: {"type":{"key":{"type":"string","enum":["a","b"],"required":true},"value":{"type":"string","required":true,"maxlength":1}}}
+extValidate | obj: "a", schema: undefined
+extValidate | obj: {}, schema: undefined
+extValidate | obj: {"key":"b","value":"B"}, schema: {"type":{"key":{"type":"string","enum":["a","b"],"required":true},"value":{"type":"string","required":true,"maxlength":1}}}
+extValidate | obj: "b", schema: undefined
+extValidate | obj: "B", schema: undefined
+calling next
+✔ testArrayObject
+pre validate: this: {"any1":{"what":"ever"},"_id":"554b1fabb4c6fd2831bc77db","any4":[1,"2",true],"any3":[{"what":"ever"},1,"asdf"],"any2":[1,"asdf",true]}
+schema: {"any1":{"path":"any1","instance":"Mixed","validators":[],"setters":[],"getters":[],"options":{},"_index":null},"any2":{"caster":{"path":"any2","instance":"Mixed","validators":[],"setters":[],"getters":[],"options":{},"_index":null},"path":"any2","instance":"Array","validators":[],"setters":[],"getters":[],"options":{"type":[]},"_index":null},"any3":{"caster":{"path":"any3","instance":"Mixed","validators":[],"setters":[],"getters":[],"options":{},"_index":null},"path":"any3","instance":"Array","validators":[],"setters":[],"getters":[],"options":{"type":[{}]},"_index":null},"any4":{"caster":{"path":"any4","instance":"Mixed","validators":[],"setters":[],"getters":[],"options":{},"_index":null},"path":"any4","instance":"Array","validators":[],"setters":[],"getters":[],"options":{"type":[null]},"_index":null},"_id":{"path":"_id","instance":"ObjectID","validators":[],"setters":[null],"getters":[],"options":{"auto":true},"_index":null},"__v":{"path":"__v","instance":"Number","validators":[],"setters":[],"getters":[],"options":{},"_index":null}}
 getVal properties: any1
 prop: any1
+extValidate | obj: {"what":"ever"}, schema: {"type":"mixed"}
+extValidate | obj: "ever", schema: undefined
 getVal properties: any2
 prop: any2
+extValidate | obj: [1,"asdf",true], schema: {"type":"array"}
+isValidArray | arr: [1,"asdf",true], schema: {"type":"array"}
+passed required
+passed min
+passed max
+extValidate | obj: 1, schema: undefined
+extValidate | obj: "asdf", schema: undefined
+extValidate | obj: true, schema: undefined
 getVal properties: any3
 prop: any3
+extValidate | obj: [{"what":"ever"},1,"asdf"], schema: {"type":"array"}
+isValidArray | arr: [{"what":"ever"},1,"asdf"], schema: {"type":"array"}
+passed required
+passed min
+passed max
+extValidate | obj: {"what":"ever"}, schema: undefined
+extValidate | obj: 1, schema: undefined
+extValidate | obj: "asdf", schema: undefined
 getVal properties: any4
 prop: any4
+extValidate | obj: [1,"2",true], schema: {"type":"array"}
+isValidArray | arr: [1,"2",true], schema: {"type":"array"}
+passed required
+passed min
+passed max
+extValidate | obj: 1, schema: undefined
+extValidate | obj: "2", schema: undefined
+extValidate | obj: true, schema: undefined
 calling next
-✔ testPlugin
+✔ testMixed
 
-[1m[32mOK: [39m[22m0 assertions (440ms)
+[1m[32mOK: [39m[22m0 assertions (465ms)
