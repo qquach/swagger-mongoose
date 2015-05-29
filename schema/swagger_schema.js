@@ -2,14 +2,13 @@
  * New node file
  */
 module.exports = {
-    aNumber: {
-      type: "number"
-    },
-    aString: {
-      type: "string"
-    },
-    aBoolean: {
-      type: "boolean"
+    simple: {
+      key:{
+        type: "string"
+      },
+      value: {
+        type: "string"
+      }
     },
     anObject: {
       num: {
@@ -19,42 +18,49 @@ module.exports = {
         type: "date"
       }
     },
-    aDate: {
-      type: "date",
-    },
-    anArrayString: {
-      type: "array",
-      items: {
+    test: {
+      aNumber: {
+        type: "number"
+      },
+      aString: {
         type: "string"
-      }
-    },
-    anArrayObject: {
-      type: "array",
-      items: {
-        type: {
-          key:{
-            type: "string"
-          },
-          value: {
-            type: "string"
-          }
+      },
+      aBoolean: {
+        type: "boolean"
+      },
+      anObject: {
+        $ref: "#/definitions/anObject"
+      },
+      aDate: {
+        type: "date",
+      },
+      anArrayString: {
+        type: "array",
+        items: {
+          type: "string"
         }
+      },
+      anArrayObject: {
+        type: "array",
+        items: {
+          $ref: "#/definitions/simple"
+        }
+      },
+      any1: {
+        type: "array",
+        items: "#undefined"
+      },
+      any2: {
+        type: "array",
+        items: "#undefined"
+      },
+      any3: {
+        type: "array",
+        items: "#undefined"
+      },
+      any4: {
+        type: "array",
+        items: "#undefined"
       }
-    },
-    any1: {
-      type: "array",
-      items: "#undefined"
-    },
-    any2: {
-      type: "array",
-      items: "#undefined"
-    },
-    any3: {
-      type: "array",
-      items: "#undefined"
-    },
-    any4: {
-      type: "array",
-      items: "#undefined"
     }
 }

@@ -14,7 +14,14 @@ module.exports = {
       type: Boolean
     },
     anObject: {
-      type:{num: Number, date: Date},
+      type:{
+        num: {
+          type: Number
+        },
+        date: {
+          type:Date
+        }
+      }
     },
     aDate: {
       type: Date,
@@ -36,12 +43,12 @@ module.exports = {
       type: Schema.Types.Mixed,
     },
     any2: {
-      type:[]
+      type:Schema.Types.Mixed
     },
     any3: {
-      type:[{}]
+      type:Schema.Types.Mixed
     },
     any4: {
-      type:[Schema.Types.Mixed]
+      type:Schema.Types.Mixed
     }
 }
